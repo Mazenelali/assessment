@@ -37,7 +37,7 @@ function App() {
         let countWord = 0;
         arrayOfArticle.forEach((eachArticle, index) => {
             const paragraph = document.getElementById(`art-${index}`);
-            const textContent = paragraph.textContent;
+            const textContent = paragraph.textContent.toLocaleLowerCase();
             const word = text.trim();
             const reg = new RegExp(word, "gi");
             const highlight = textContent.replace(
